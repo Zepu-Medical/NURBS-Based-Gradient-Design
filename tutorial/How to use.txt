@@ -1,0 +1,18 @@
+% Copyright (c) 2024 Zepu Medical. 
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+
+%    http://www.apache.org/licenses/LICENSE-2.0
+
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+Add "Functions" folder to the path
+1. In the step0 folder, run wire_fitting.m to fit the point series and save it in NURBS_curve_ini.mat. The point series is located in Coil2D_ini.mat.
+2. Run NURBS_wire_optimization_phase2 for optimization. After iterating a specific number of times, modify XX in coeff_opt=glo_coeff{XX}, then run this section.
+3. The design will be drawn and saved in Coil2D_final.mat. The results of the iteration are saved in coeff_iter.mat.
+4. Copy "Coil2D_final.mat" to the next step's folder and rename it as "Coil2D_ini.mat", and return to step 1.
